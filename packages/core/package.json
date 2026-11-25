@@ -2,6 +2,11 @@
   "name": "@alleneubank/gh-pulse-core",
   "version": "1.5.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alleneubank/gh-pulse.git",
+    "directory": "packages/core"
+  },
   "files": [
     "dist"
   ],

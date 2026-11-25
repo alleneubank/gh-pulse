@@ -9,6 +9,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  # npm trusted publishing: npm exchanges the workflow's OIDC token for a publish credential.
+  id-token: write
 
 jobs:
   release:
@@ -21,6 +23,15 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+
+      # Trusted publishing needs npm 11.5.1 or later; the runner's default Node ships npm 10.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install npm with trusted publishing support
+        run: npm install --global npm@^11.5.1
 
       - name: Install Dependencies
         run: bun install --frozen-lockfile
@@ -35,5 +46,3 @@ jobs:
           createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

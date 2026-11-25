@@ -1,6 +1,7 @@
 {
   "name": "@alleneubank/utils",
   "version": "0.0.7",
+  "private": true,
   "license": "MIT",
   "files": [
     "dist"

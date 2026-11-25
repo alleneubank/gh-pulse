@@ -5,7 +5,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alleneubank/gh-pulse"
+    "url": "git+https://github.com/alleneubank/gh-pulse.git",
+    "directory": "apps/cli"
   },
   "bin": {
     "gh-pulse": "src/index.ts"
