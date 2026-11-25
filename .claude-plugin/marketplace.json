@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "gh-pulse-marketplace",
+  "owner": {
+    "name": "alleneubank"
+  },
+  "metadata": {
+    "description": "GitHub analytics plugins for engineering visibility"
+  },
+  "plugins": [
+    {
+      "name": "gh-pulse",
+      "description": "GitHub analytics CLI for engineering visibility - PR metrics, contribution stats, team health",
+      "version": "1.9.0",
+      "author": {
+        "name": "alleneubank"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/alleneubank/gh-pulse"
+    }
+  ]
+}

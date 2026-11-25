@@ -1,0 +1,11 @@
+{
+  "name": "gh-pulse",
+  "description": "GitHub analytics CLI for engineering visibility - PR metrics, contribution stats, team health",
+  "author": {
+    "name": "alleneubank"
+  },
+  "homepage": "https://github.com/alleneubank/gh-pulse",
+  "repository": "https://github.com/alleneubank/gh-pulse",
+  "license": "MIT",
+  "skills": "./skills"
+}

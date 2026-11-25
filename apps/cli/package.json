@@ -1,0 +1,27 @@
+{
+  "name": "@alleneubank/gh-pulse",
+  "version": "1.9.0",
+  "description": "GitHub analytics CLI for engineering visibility - PR metrics, contribution stats, team health",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alleneubank/gh-pulse"
+  },
+  "bin": {
+    "gh-pulse": "src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "echo 'no build step'",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "@alleneubank/gh-pulse-core": "^1.5.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}

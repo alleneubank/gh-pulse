@@ -1,0 +1,26 @@
+{
+  "name": "@alleneubank/utils",
+  "version": "0.0.7",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "zshy"
+  },
+  "dependencies": {
+    "@alleneubank/gh-pulse-core": "workspace:*"
+  },
+  "zshy": "./src/index.ts"
+}

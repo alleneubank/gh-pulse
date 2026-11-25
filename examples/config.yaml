@@ -1,0 +1,55 @@
+# gh-pulse example configuration
+# Copy to ~/.config/gh-pulse/config.yaml and customize
+
+# Authentication - uses first available:
+#   1. github_token in config (with ${GITHUB_TOKEN} env var substitution)
+#   2. `gh auth token` from GitHub CLI (if authenticated)
+# Uncomment if you want to use a specific token instead of gh CLI:
+# github_token: ${GITHUB_TOKEN}
+
+# Optional: Linear integration
+# linear_api_key: ${LINEAR_API_KEY}
+
+# Repositories to track
+repos:
+  - alleneubank/gh-pulse
+  # - your-org/repo-name
+  # - your-org/*  # glob patterns supported
+
+# Or scan entire orgs
+# orgs:
+#   - your-org
+
+# Team membership strategy (org_members | config_list | repo_contributors)
+# team:
+#   strategy: org_members
+#   members:  # only used if strategy: config_list
+#     - alice
+#     - bob
+
+# Exclusions (all default to true)
+exclude:
+  bots: true
+  forks: true
+  archived: true
+  authors:
+    - dependabot[bot]
+    - renovate[bot]
+    - github-actions[bot]
+
+# Thresholds
+thresholds:
+  stale_days: 2 # PR with no activity = stale
+  stuck_days: 4 # PR considered stuck
+  large_pr_lines: 500 # Lines changed for "large PR" highlight
+
+
+# Timezone for period calculations (default: system timezone)
+# timezone: America/Los_Angeles
+
+# Cache settings
+# cache:
+#   path: ~/.cache/gh-pulse/cache.db  # SQLite database location
+#   ttl_hours: 1                       # PR/commit data freshness (hours)
+#   sync_ttl_hours: 24                 # Skip repos synced within this window
+#   concurrency: 5                     # Parallel API requests per sync

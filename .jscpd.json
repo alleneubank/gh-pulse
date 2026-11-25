@@ -1,0 +1,20 @@
+{
+  "threshold": 10,
+  "minLines": 25,
+  "minTokens": 150,
+  "reporters": ["console"],
+  "format": ["typescript", "tsx", "javascript", "jsx"],
+  "ignore": [
+    ".direnv",
+    "**/.direnv/**",
+    "node_modules",
+    "**/node_modules/**",
+    "dist",
+    "**/dist/**",
+    "build",
+    "coverage",
+    "**/*.d.ts",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}

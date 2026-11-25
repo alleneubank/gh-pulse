@@ -1,0 +1,30 @@
+{
+  "name": "@alleneubank/gh-pulse-core",
+  "version": "1.5.0",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "zshy"
+  },
+  "dependencies": {
+    "@octokit/types": "^13.10.0",
+    "octokit": "^3.2.1",
+    "picomatch": "^4.0.2",
+    "yaml": "^2.7.0",
+    "zod": "^3.25.7"
+  },
+  "zshy": "./src/index.ts"
+}
