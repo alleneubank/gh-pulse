@@ -11,7 +11,7 @@
     {
       "name": "gh-pulse",
       "description": "GitHub analytics CLI for engineering visibility - PR metrics, contribution stats, team health",
-      "version": "1.9.0",
+      "version": "1.9.1",
       "author": {
         "name": "alleneubank"
       },
